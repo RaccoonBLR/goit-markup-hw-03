@@ -51,6 +51,12 @@ ul {
   padding: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .link {
   text-decoration: none;
   color: currentColor;
@@ -72,8 +78,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-
-  /* outline: 2px solid red; */
 }
 
 .section {
@@ -81,11 +85,25 @@ body {
   padding-bottom: 94px;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 /* header */
 
 .header {
-  background-color: var(--header-bg-cl);
   border-bottom: 1px solid var(--header-border-bottom);
+
+  background-color: var(--header-bg-cl);
 }
 
 .header-container {
@@ -146,17 +164,15 @@ body {
   color: var(--accent-cl);
 }
 
-.group {
-  font-weight: 500;
-  color: var(--secondary-txt-cl);
-}
-
 .header-contacts-list {
   display: flex;
   gap: 50px;
 }
 
 .header-contacts-link {
+  font-weight: 500;
+  color: var(--secondary-txt-cl);
+
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -165,14 +181,11 @@ body {
 /* hero-section */
 
 .hero-section {
-  background-color: var(--hero-footer-bg);
-}
+  text-align: center;
 
-.hero-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
+  padding: 200px 0;
+
+  background-color: var(--hero-footer-bg);
 }
 
 .hero-title {
@@ -185,7 +198,7 @@ body {
   text-transform: uppercase;
   text-align: center;
 
-  margin: 200px auto 30px auto;
+  margin: 0 auto 30px;
 
   color: var(--main-cl-title);
 }
@@ -202,10 +215,6 @@ body {
   border-radius: 4px;
   padding: 10px 32px;
 
-  margin-right: auto;
-  margin-bottom: 200px;
-  margin-left: auto;
-
   color: var(--main-cl-title);
   background-color: var(--accent-cl);
 }
@@ -217,16 +226,6 @@ body {
   gap: 30px;
 }
 
-.benefits-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  margin-bottom: 50px;
-}
-
 .benefits-list-title {
   font-weight: 700;
   font-size: 14px;
@@ -234,7 +233,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .benefits-list-subtitle {
@@ -246,6 +245,10 @@ body {
 }
 
 /* about section */
+
+.about-section {
+  padding-top: 0;
+}
 
 .about-title {
   font-weight: 700;
@@ -285,16 +288,20 @@ body {
   gap: 30px;
 }
 
+.team-list-item {
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  background-color: var(--team-wrap-bg);
+}
+
 .team-img {
   display: flex;
 }
 
 .team-wrap {
-  display: flex;
-  flex-direction: column;
-  border-radius: 0px 0px 4px 4px;
-
-  background-color: var(--team-wrap-bg);
+  padding: 30px 0;
 }
 
 .team-name {
@@ -302,7 +309,6 @@ body {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -311,20 +317,19 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
 
-  margin-bottom: 30px;
-
   color: var(--secondary-txt-cl);
 }
 
 /* footer section */
 
 .footer {
+  padding: 60px 0;
+
   background-color: var(--hero-footer-bg);
 }
 
 .footer-logo {
   display: inline-block;
-  margin-top: 60px;
   margin-bottom: 20px;
 }
 
@@ -341,7 +346,6 @@ body {
   display: inline-flex;
   flex-direction: column;
   gap: 9px;
-  margin-bottom: 60px;
 }
 
 .location {
@@ -356,13 +360,6 @@ body {
 /* portfolio */
 
 /* main */
-
-.portfolio-title {
-  visibility: hidden;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-}
 
 .portfolio-btn-list {
   display: flex;
@@ -399,13 +396,8 @@ body {
   gap: 30px;
 }
 
-.portfolio-img {
-  display: flex;
-}
-
 .portfolio-wrap {
-  display: flex;
-  flex-direction: column;
+  padding: 20px 24px;
 
   border: 1px solid var(--portfolio-item-border);
   border-top: none;
@@ -417,15 +409,13 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
 
-  margin: 20px 24px 4px 24px;
+  margin-bottom: 4px;
 }
 
 .portfolio-item-subtitle {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-
-  margin: 0px 24px 20px 24px;
 
   color: var(--secondary-txt-cl);
 }
