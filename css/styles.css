@@ -30,11 +30,11 @@
 
   --button-bg-cl: #f5f4fa;
 
-  /* Others */
-
-  --header-border-bottom: #ececec;
+  --header-border: #ececec;
   --portfolio-item-border: #eeeeee;
   --team-wrap-bg: #ffffff;
+
+  /* Others */
 }
 
 /* reset */
@@ -101,7 +101,7 @@ body {
 /* header */
 
 .header {
-  border-bottom: 1px solid var(--header-border-bottom);
+  border-bottom: 1px solid var(--header-border);
 
   background-color: var(--header-bg-cl);
 }
